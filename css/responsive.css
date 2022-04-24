@@ -4,69 +4,54 @@
 @media (min-width: 740px) and (max-width: 1023px) {
 }
 
-@media (max-width: 740px) {
-  /* --------------------------------- common --------------------------------- */
-
-  .col-3 {
-    width: 100%;
-    margin-bottom: 16px;
+@media only screen and (max-width: 768px) {
+  .header__icon {
+    display: inherit;
   }
-
-  /* --------------------------------- common --------------------------------- */
-
-  #header {
-    overflow: hidden;
-  }
-  #nav {
-    display: block;
-  }
-  #nav > li {
-    display: block;
-    overflow: hidden;
-  }
-  #nav > li:first-child {
-    display: inline-block;
-  }
-  .search_menu {
+  #nav .menu {
     display: none;
   }
-
-  .bar_menu {
-    line-height: 46px;
-    padding: 0 21px;
+  /* #nav .menu .menu-item:last-child {
+    display: inherit;
+  } */
+  #nav .menu.toggle {
     position: absolute;
-    top: 0;
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 100%;
+    color: #000;
+    width: 100%;
+    background-color: #666;
     right: 0;
-    float: right;
+    left: 0;
+    /* transition: 0.5s; */
   }
-  .bar_menu i[class*="fas"] {
-    color: #fff;
+  #nav .menu.toggle .menu-item {
+    margin: 10px 0;
   }
-  .bar_menu:hover {
-    background-color: #ccc;
+  #nav .menu.toggle .menu-item .menu-link {
+    padding: 5px 10px;
   }
-  #slider .text {
-    display: none;
+  #feature .feature__main .feature__list,
+  #feature .our__main .our__list {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .img_text {
-    display: block;
+  #feature .feature__main .feature__list .feature__item,
+  #feature .our__main .our__list .our__item {
+    margin-bottom: 80px;
   }
-  #nav .subnav {
-    position: initial;
-    padding: 0 30px;
-    background-color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-group .form {
+    flex-direction: column;
   }
-  #nav .subnav a {
-    color: #fff;
+  .icons-social {
+    flex-wrap: wrap;
   }
-  /* --------------------------------- footer --------------------------------- */
-  #footer i[class*="fab"] {
-    font-size: 20px;
-    margin-left: 10px;
+  #slider .slider__overlay .slider__body .slider_action a {
+    margin: 10px 0;
   }
-  #footer .foo_txt {
-    font-size: 16px;
-    margin: 20px 0;
-  }
-  /* --------------------------------- footer --------------------------------- */
 }
